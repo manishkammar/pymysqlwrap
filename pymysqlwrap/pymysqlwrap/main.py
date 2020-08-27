@@ -1,7 +1,3 @@
-import pandas as pd
-import json
-with open('config.json') as f:
-  data = json.load(f)
 
 
 class wrapsql():
@@ -23,6 +19,3 @@ class wrapsql():
   
 
 
-con=wrapsql.connect(data,'PROD')
-df = wrapsql.get_data(con,'procedurepredictiondata',"isprebilling = 1")
-print(df)
